@@ -1,5 +1,42 @@
 # KalKal Change Log
 
+## 📅 2024-03-17
+### 🔹 Fixes & Improvements:
+- ✅ **Fixed:** Input field styling regression by adding background color to form inputs
+- ✅ **Enhanced:** Form input styling consistency across all pages and components
+- ✅ **Updated:** The `.form-input` class in globals.css to include proper background styling
+- ✅ **Added:** Background color to the base `input` element style for consistent appearance
+- ✅ **Ensured:** Consistent styling for all form elements throughout the application
+
+### 📄 Files Affected:
+- `src/app/globals.css` - Updated the `.form-input` class to include `bg-white` for proper background styling
+- `src/app/globals.css` - Added background color to the base `input` element style
+- `docs/Kalkal_Change_Log.md` - Updated with details of the changes
+
+### ✓ Verification Steps:
+1. Confirmed that input fields now display with proper white background across all forms
+2. Verified that the styling is consistent between EventForm, LoginForm, and SignupForm components
+3. Ensured that the fix does not introduce any new styling issues or regressions
+4. Checked that the form input styling matches the design specifications
+
+## 📅 2024-03-16
+### 🔹 Documentation & Process Improvements:
+- ✅ **Enhanced:** Change Log documentation process with clearer guidelines for entries
+- ✅ **Updated:** Change Log format to ensure consistent documentation of all modifications
+- ✅ **Improved:** Process for tracking changes to prevent sensitive data exposure
+- ✅ **Added:** Verification steps to ensure all changes align with project requirements
+- ✅ **Established:** Better coordination between requirements and implementation documentation
+
+### 📄 Files Affected:
+- `docs/Kalkal_Change_Log.md` - Updated format and added new entry
+- `docs/Kalkal_Requirements.md` - Referenced for alignment with project requirements
+
+### ✓ Verification Steps:
+1. Confirmed that the Change Log format follows the specified structure with date, description, and categorization
+2. Verified that no sensitive information (API keys, credentials, user data) is included in the log
+3. Ensured that all documented changes align with the requirements in `Kalkal_Requirements.md`
+4. Checked that the Change Log provides sufficient detail for tracking project evolution
+
 ## 📅 2024-03-15
 ### 🔹 Fixes & Improvements:
 - ✅ **Consolidated:** Firebase configuration management by centralizing the `getFirebaseConfig` function in `firebaseConfig.ts`
@@ -7,6 +44,12 @@
 - ✅ **Enhanced:** Documentation with clear comments indicating where functions have been moved to prevent confusion
 - ✅ **Optimized:** Firebase initialization process with better coordination between modules
 - ✅ **Ensured:** Consistent error handling across all Firebase-related modules
+
+### 📄 Files Affected:
+- `src/lib/firebase/firebaseClient.ts` - Updated imports to use the correct `getFirebaseConfig` function
+- `src/lib/firebase/loadEnv.ts` - Removed duplicate `getFirebaseConfig` function
+- `src/lib/firebase/firebaseConfig.ts` - Centralized Firebase configuration management
+- `docs/Kalkal_Change_Log.md` - Updated with details of the changes
 
 ## 📅 2024-03-14
 ### 🔹 Fixes & Improvements:
@@ -17,6 +60,13 @@
 - ✅ **Optimized:** Environment variable validation to check both `process.env` and `window.__ENV` sources
 - ✅ **Refined:** Debug logging to provide more actionable information when Firebase initialization fails
 - ✅ **Added:** Clear documentation comments to indicate where functions have been moved to prevent future duplication
+
+### 📄 Files Affected:
+- `src/lib/firebase/firebaseClient.ts` - Fixed linter error and updated imports
+- `src/lib/firebase/loadEnv.ts` - Removed duplicate function and added documentation comments
+- `src/app/components/FirebaseLoader.tsx` - Verified correct imports
+- `src/app/components/FirebaseDebug.tsx` - Verified correct imports
+- `docs/Kalkal_Change_Log.md` - Updated with details of the changes
 
 ## 📅 2024-03-13
 ### 🔹 Fixes & Improvements:
@@ -30,6 +80,14 @@
 - ✅ **Added:** Functions to check if all required environment variables are available
 - ✅ **Improved:** CORS risk assessment for Firebase Authentication
 - ✅ **Optimized:** Logging to only show detailed logs when debug mode is enabled
+
+### 📄 Files Affected:
+- `src/lib/firebase/loadEnv.ts` - Enhanced environment variable handling and injection
+- `src/lib/firebase/firebaseClient.ts` - Added retry mechanisms for initialization
+- `src/lib/firebase/envDebugger.ts` - Improved debugging of environment variables
+- `src/lib/utils/envValidator.ts` - Enhanced validation with clearer error messages
+- `src/app/components/FirebaseLoader.tsx` - Updated to ensure proper initialization
+- `docs/Kalkal_Change_Log.md` - Updated with details of the changes
 
 ## 📅 2024-03-12
 ### 🔹 Fixes & Improvements:
