@@ -1,5 +1,23 @@
 # KalKal Change Log
 
+## 📅 2024-03-15
+### 🔹 Fixes & Improvements:
+- ✅ **Consolidated:** Firebase configuration management by centralizing the `getFirebaseConfig` function in `firebaseConfig.ts`
+- ✅ **Improved:** Module organization with clear separation of concerns between environment loading and configuration
+- ✅ **Enhanced:** Documentation with clear comments indicating where functions have been moved to prevent confusion
+- ✅ **Optimized:** Firebase initialization process with better coordination between modules
+- ✅ **Ensured:** Consistent error handling across all Firebase-related modules
+
+## 📅 2024-03-14
+### 🔹 Fixes & Improvements:
+- ✅ **Fixed:** Linter error in `firebaseClient.ts` by updating imports to use the correct `getFirebaseConfig` function from `firebaseConfig.ts`
+- ✅ **Resolved:** Duplicate implementation of `getFirebaseConfig` by removing it from `loadEnv.ts` and ensuring proper imports between modules
+- ✅ **Enhanced:** Firebase configuration loading with proper type checking and error handling
+- ✅ **Improved:** Coordination between `loadEnv.ts`, `firebaseConfig.ts`, and `firebaseClient.ts` for more reliable Firebase initialization
+- ✅ **Optimized:** Environment variable validation to check both `process.env` and `window.__ENV` sources
+- ✅ **Refined:** Debug logging to provide more actionable information when Firebase initialization fails
+- ✅ **Added:** Clear documentation comments to indicate where functions have been moved to prevent future duplication
+
 ## 📅 2024-03-13
 ### 🔹 Fixes & Improvements:
 - ✅ **Fixed:** Firebase environment variable issues with improved loading and initialization
